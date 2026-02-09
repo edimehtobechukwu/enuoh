@@ -54,7 +54,7 @@ export function Store() {
               <div className="w-full aspect-square bg-white rounded-[16px] border border-black/5 mb-6 flex items-center justify-center relative overflow-hidden">
                 <span className="font-oswald font-bold text-[80px] text-black/10 group-hover:scale-125 transition-transform duration-500">{product.image}</span>
 
-                <button className="absolute bottom-4 right-4 w-10 h-10 bg-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0">
+                <button className="absolute bottom-4 right-4 w-10 h-10 bg-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0" title="View details">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M8 3.33334V12.6667" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M3.33333 8H12.6667" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
