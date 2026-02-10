@@ -4,9 +4,11 @@ import imgEmily from "../assets/c7bc8b933f4b89a372fc54b830c07c07db005c81.png";
 import svgPaths from "../imports/svg-vwdc2ur8x1";
 import { motion } from "motion/react";
 import { useRef } from "react";
+import { useNavTheme } from "../hooks/useNavTheme";
 
 export function Testimonials() {
    const containerRef = useRef(null);
+   const ref = useNavTheme("light");
 
    const testimonials = [
       {
@@ -33,7 +35,7 @@ export function Testimonials() {
    ];
 
    return (
-      <section className="bg-[#f5f5f0] w-full min-h-[606px] pt-[97px] overflow-hidden relative border-t border-black/5 pb-24">
+      <section ref={ref} className="bg-[#f5f5f0] w-full min-h-[606px] pt-[97px] overflow-hidden relative border-t border-black/5 pb-24">
          <div className="mx-auto max-w-[1280px] px-8 md:px-8 xl:px-0 h-full flex flex-col gap-[64px]">
 
             {/* Header - Made Relative for responsiveness */}

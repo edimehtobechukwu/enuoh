@@ -2,10 +2,12 @@ import imgMap from "../assets/27c58bf6501b866922f10189914d7684e80d0170.png";
 import imgFounder from "../assets/2b9ef09f6892e65c2f6b68b67b59e19642716597.png";
 import imgFounderFront from "../assets/da7d1ff6362f06d73d65f2b8968988b602f9d655.png";
 import { motion } from "motion/react";
+import { useNavTheme } from "../hooks/useNavTheme";
 
 export function About() {
+   const ref = useNavTheme("dark");
    return (
-      <section className="bg-[#050505] w-full pt-[97px] pb-32 overflow-hidden">
+      <section ref={ref} className="bg-[#050505] w-full pt-[97px] pb-32 overflow-hidden">
          <div className="mx-auto max-w-[1280px] px-8 md:px-8 xl:px-0 flex flex-col gap-[80px]">
 
             {/* Map Section */}

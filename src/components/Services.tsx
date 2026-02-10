@@ -2,8 +2,10 @@ import imgBranding from "../assets/6ee9938b7633fac711c232c84c3ec8681b2d97cc.png"
 import imgWeb from "../assets/c03fce936f31f8e8fb13235978b913ec15c16267.png";
 import imgMotion from "../assets/450a6f2cd7cab5b5ca9a14b6b64d4b02a52fe239.png";
 import { motion } from "motion/react";
+import { useNavTheme } from "../hooks/useNavTheme";
 
 export function Services() {
+  const ref = useNavTheme("dark");
   const services = [
     {
       title: "Branding Identity",
@@ -23,7 +25,7 @@ export function Services() {
   ];
 
   return (
-    <section className="bg-[#0a0a0a] w-full pt-[97px] pb-32 relative">
+    <section ref={ref} className="bg-[#0a0a0a] w-full pt-[97px] pb-32 relative">
       <div className="absolute inset-0 border-t border-white/5 pointer-events-none" />
 
       <div className="mx-auto max-w-[1280px] px-8 md:px-8 xl:px-0 flex flex-col gap-[80px]">

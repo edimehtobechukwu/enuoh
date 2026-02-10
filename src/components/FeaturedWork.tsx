@@ -5,10 +5,12 @@ import imgStudio from "../assets/1183a8119a896de33fe7c40956e62f807143b437.png";
 import imgJS from "../assets/d53d54111ba8d07a72b3f5ba12ec4f50ffafe2a7.png";
 import svgPaths from "../imports/svg-vwdc2ur8x1";
 import { motion } from "motion/react";
+import { useNavTheme } from "../hooks/useNavTheme";
 
 export function FeaturedWork() {
+  const ref = useNavTheme("light");
   return (
-    <section className="bg-[#f5f5f0] w-full pb-32">
+    <section ref={ref} className="bg-[#f5f5f0] w-full pb-32">
       <div className="mx-auto max-w-[1280px] px-4 md:px-8 xl:px-0">
 
         {/* Header */}

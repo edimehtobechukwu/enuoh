@@ -1,10 +1,12 @@
 import imgAbstract from "../assets/ea2305de32166537453a573463cbddbb3d72751c.png";
 import svgPaths from "../imports/svg-vwdc2ur8x1";
 import { motion } from "motion/react";
+import { useNavTheme } from "../hooks/useNavTheme";
 
 export function Hero() {
+    const ref = useNavTheme("dark");
     return (
-        <section className="relative w-full min-h-[1000px] bg-[#f5f5f0] p-4 md:p-6 flex flex-col items-center justify-center">
+        <section ref={ref} className="relative w-full min-h-[1000px] bg-[#f5f5f0] p-4 md:p-6 flex flex-col items-center justify-center">
             <div className="relative w-full max-w-[1486px] h-full min-h-[800px] md:h-[952px] bg-[#0a0a0a] rounded-[24px] md:rounded-[32px] overflow-hidden flex flex-col md:block">
 
                 {/* Navigation is absolute on top, handled by Navbar component */}
