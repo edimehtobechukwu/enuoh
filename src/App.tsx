@@ -13,7 +13,11 @@ import { Store } from "./pages/Store";
 const ScrollToTop = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant"
+    });
   }, [location.pathname]);
   return children;
 };
